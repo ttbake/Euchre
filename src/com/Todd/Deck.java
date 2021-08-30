@@ -35,7 +35,7 @@ public class Deck {
             for (String value : Values) {
                 for (String suit : Suits){
                     Card card = new Card(value, suit);
-                    //CardsInDeck.add(card);
+                    CardsInDeck.add(card);
                 }
             }
         }
