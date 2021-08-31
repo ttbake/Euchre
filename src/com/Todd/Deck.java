@@ -1,13 +1,10 @@
 package com.Todd;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Deck {
     private Map<String, Integer> MapOfCardValues = new HashMap<>();
-    private Set<Card> CardsInDeck = new HashSet<>();
+    private List<Card> CardsInDeck = new ArrayList<>();
     private static String[] Suits = new String[]{"Clubs", "Spades", "Hearts", "Diamonds"};
     private static String[] Values = new String[]{"9", "10", "J", "Q", "K", "A"};
 
@@ -26,7 +23,7 @@ public class Deck {
         }
     }
 
-    public Set<Card> getCardsInDeck() {
+    public List<Card> getCardsInDeck() {
         return CardsInDeck;
     }
 
@@ -39,9 +36,7 @@ public class Deck {
                 }
             }
         }
-    }
-
-    public void Shuffle(){
-
+        Collections.shuffle(CardsInDeck);
+        setMapOfCardValues();
     }
 }

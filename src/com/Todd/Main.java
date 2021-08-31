@@ -8,5 +8,10 @@ public class Main {
         for (Card card : deck.getCardsInDeck()) {
             System.out.println(card.toString());
         }
+        Game game = new Game();
+        game.dealHandsToPlayers(deck);
+        for (Player player : game.getPlayersInGame()){
+            System.out.println(player.getName() + " has " + player.getPlayerHand().getCardsInHand());
+        }
     }
 }
