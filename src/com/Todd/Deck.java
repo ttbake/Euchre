@@ -5,7 +5,16 @@ import java.util.*;
 public class Deck {
     private Map<String, Integer> MapOfCardValues = new HashMap<>();
     private List<Card> CardsInDeck = new ArrayList<>();
-    private static String[] Suits = new String[]{"Clubs", "Spades", "Hearts", "Diamonds"};
+    private static String[] Suits = new String[]{"clubs", "spades", "hearts", "diamonds"};
+
+    public List<String> getSuits() {
+        return Arrays.stream(Suits).toList();
+    }
+
+    public static String[] getValues() {
+        return Values;
+    }
+
     private static String[] Values = new String[]{"9", "10", "J", "Q", "K", "A"};
 
     public Map<String, Integer> getMapOfCardValues() {

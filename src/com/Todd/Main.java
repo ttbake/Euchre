@@ -13,5 +13,6 @@ public class Main {
         for (Player player : game.getPlayersInGame()){
             System.out.println(player.getName() + " has " + player.getPlayerHand().getCardsInHand());
         }
+        game.setTrump(deck);
     }
 }
